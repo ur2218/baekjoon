@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    double a, b, c;
+    cin >> a >> b;
+    c = a / b;
+    cout.precision(9);  // 소수점 9번째자리까지 출력
+    cout << fixed;      // 소수점 이하의 숫자를 고정하여 출력, 지정된 자리수까지만 출력
+    cout << c << endl;
+    return 0;
+}
