@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    int T;
+    
+    cin >> T;
+    
+    string S[T];
+    
+    for (int i=0; T > i; i++){
+        cin >> S[i] ;
+    }
+    
+    for (int i=0; T > i; i++){
+        cout << S[i][0] << S[i][S[i].length() - 1] << endl;    // S[i]의 첫번째 글자를 출력하려면 S[i][0]와 같이 표시 
+    }                                                          // S[i]의 마지막 글자를 출력하기 위해 S[i]의 글자길이를 구하기위한 length()함수 사용
+}
