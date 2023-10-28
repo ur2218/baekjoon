@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int A, B;
+    int A_array[3], B_array[3];
+    
+    cin >> A >> B;
+    
+    A_array[0] = A / 100;                //GPT 도움 받음 ㅜㅜ
+    A_array[1] = ( A % 100) / 10;        //A,B를 대입받고 각 자리를 지정하려면
+    A_array[2] = A % 10;                 //배열을 만들어서 하나씩 넣어줌
+    
+    B_array[0] = B / 100;               
+    B_array[1] = ( B % 100) / 10;
+    B_array[2] = B % 10;
+    
+    cout << A * B_array[2] << endl;
+    cout << A * B_array[1] << endl;
+    cout << A * B_array[0] << endl;
+    cout << A * B << endl;
+}
