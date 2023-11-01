@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int array[9];
+    int max;
+    int n;
+    
+    for (int i=0; 9 > i; i++){
+        cin >> array[i] ;
+    }
+    
+    max = array[0];
+    
+    for (int i=0; 9 > i; i++){    //최대값찾기 
+        if (array[i] >= max){
+            max = array[i];
+            n = i;
+        }
+    }
+    
+    cout << max << endl;
+    cout << n + 1;
+}
