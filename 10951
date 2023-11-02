@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int A, B;
+    
+    while(true){
+        cin >> A >> B ;
+        if(cin.eof()){    //eof은 end of file로 cin이 더이상 파일을 불러들일 수 없을 때
+            break;
+        }
+    cout << A + B << endl;
+    }
+}
