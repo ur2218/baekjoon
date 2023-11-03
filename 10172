@@ -1,0 +1,12 @@
+#include <iostream>        // 입출력을 위한 라이브러리
+using namespace std;       // std생략을 위한 namespace std기능 사용
+
+int main(){
+    cout << "|\\_/|" << endl;        // \,"를 표현하려면 \를 하나더 써줘야함
+    cout << "|q p|   /}" << endl;    
+    cout << "( 0 )\"\"\"\\" << endl;    
+    cout << "|\"^\"`    |" << endl;
+    cout << "||_/=\\\\__|" << endl;
+
+    return 0;
+}
