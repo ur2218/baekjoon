@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int A, B, C, a;                   //A는 입력받는 시, B는 분, C는 요리소요시간, 
+    cin >> A >> B ;                   
+    cin >> C ;
+    a = ( B + C ) / 60 ;              //a는 B와 C를 더하고 60분이 넘으면 +시간을 위한 변수
+   
+    if ( B + C >= 60){                //C를 더했을 때 A가 +1되는 경우
+        if ( A + a < 24){                                // A + c 가  24시간이 안되는 경우
+            cout << A + a  << " " << ( B + C) % 60 ;     
+        }
+        
+        else if ( A + a >= 24){                          // A + c 가  24시간인 경우
+            cout << ( A + a ) - 24 << " " << ( B + C) % 60 ;
+        }
+    }
+   
+    if ( B + C < 60 ){               //C를 더했을 때 A가 +1되지 않는 경우
+        cout << A << " " << B + C ;
+    }
+}
