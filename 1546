@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int N;
+    int H = 0;
+    cin >> N;
+    
+    int score[N];
+    float array[N];
+    float sum = 0.0;
+
+    for (int i = 0; i < N; i++){
+        cin >> score[i];
+    }
+    
+    for (int i = 0; i < N; i++){
+        if (score[i] >= H){
+            H = score[i];
+        }
+    }
+
+    // 배열 초기화 및 값 할당
+    for (int i = 0; i < N; i++){
+        array[i] = static_cast<float>(score[i]);
+    }
+
+    // 0으로 나누기 방지
+    if (H != 0) {
+        for (int i = 0; i < N; i++){
+            array[i] = array[i] / static_cast<float>(H) * 100;
+            sum += array[i];
+        }
+    }
+    
+    cout << sum / static_cast<float>(N);
+    
+    return 0;
+}
