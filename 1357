@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+int Rev(string X){                //함수 Rev선언, 매개변수 string X를 받아
+    reverse(X.begin(), X.end());  //reverse함수사용해서 X를 역순으로 만들기
+    int a = stoi(X);              //X를 string에서 int로 바꾼 값을 a에 대입 
+    return a;                     //Rev함수는 a를 반환
+}                                 
+
+int main(){
+    string X, Y;            
+    cin >> X >> Y;
+    
+    int A;        
+    A = Rev(X) + Rev(Y);          //int로 나온 Rev(X)+Rev(Y)값을 변환하고자
+    string B = to_string(A);      
+    
+    cout << Rev(B) ;
+}
+
