@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    string subject;
+    float time = 0.0;
+    string score;
+    float sum = 0.0;
+    float total_time = 0;
+    
+    for (int i = 0; i < 20; i++){
+        cin >> subject >> time >> score ;    // 배열 쓸 필요없었다는게 난 처음 틀림.
+      
+        if ( score == "P"){        // 패스과목만 따로 
+            continue;    
+        }
+        
+        total_time += time;        // 패스과목의 학점은 총학점에 반영안돼야함.
+           
+        if ( score == "A+"){       // 다시 if문 시작되어야함
+            sum += time * 4.5;
+        }
+        
+        else if ( score == "A0"){
+            sum += time * 4.0;
+        }        
+        
+        else if ( score == "B+"){
+            sum += time * 3.5;
+        }
+        
+        else if ( score == "B0"){
+            sum += time * 3.0;
+        }
+        
+        else if ( score == "C+"){
+            sum += time * 2.5;
+        }
+        
+        else if ( score == "C0"){
+            sum += time * 2.0;
+        }        
+        
+        else if ( score == "D+"){
+            sum += time * 1.5;
+        }
+        
+        else if ( score == "D0"){
+            sum += time * 1.0;
+        }             
+
+        else if ( score == "F"){
+            sum += time * 0.0;
+        }        
+    }
+    
+    cout << sum / total_time;
+}
