@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int N, M;
+
+    cin >> N >> M;
+
+    int A[N][M], B[N][M];
+    
+    
+    for (int i=0; i < N; i++){
+        for (int j=0; j < M; j++){
+            cin >> A[i][j];
+        }
+    }
+    
+    for (int i=0; i < N; i++){
+        for (int j=0; j < M; j++){
+            cin >> B[i][j];
+        }
+    }
+    
+    for (int i=0; i < N; i++){
+        for (int j=0; j < M; j++){
+            cout << A[i][j]+B[i][j] << " ";
+        }
+        cout << endl;   // 2x2가 아니라 1x4로 나와서 행추가. 여기서 틀림
+    }
+}
