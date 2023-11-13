@@ -7,3 +7,8 @@ int main(){
     cout << a + b << endl;
     return 0;
 }
+
+
+// 파이썬
+A, B = map(int,input().split())
+print(A+B)
