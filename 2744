@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cctype> // toupper, tolower 함수를 사용하기 위해 필요한 헤더 파일
+using namespace std;
+
+
+int main() {
+
+    string a;
+
+    cin >> a;
+
+    for (char &c : a) {         // (char &c : a)는 범위 기반 for 루프로서, 문자열 a에 있는 각 문자를 c에 차례로 할당하면서 반복
+        if (islower(c)) {       // a가 qweQWE라면 q>w>e..>E이렇게 알파벳한개씩 반복시킴
+            c = toupper(c);
+        } else if (isupper(c)) {
+            c = tolower(c);
+        }
+    }
+
+    cout << a ;
+
+}
+
+/*
+    for (char a) {
+        if (islower(a)) {
+            a = toupper(a);
+        } else if (isupper(a)) {
+            a = tolower(a);
+        }
+    } 그럼왜 굳이 참조를 쓰는거야? 위에처럼 다 a를 쓰면되잖아. 어짜피 a자기자신을 바꿀건데
+
+    
+좋은 질문이야! 범위 기반 for 루프에서 char a와 같이 변수를 선언하면 루프 안에서 a는 문자의 복사본을 가지게 돼. 그렇기 때문에 a를 변경하더라도 원본 문자열에는 영향을 미치지 않아.
+반면에 char &c로 선언하면 c가 실제로 문자열의 각 요소를 참조하게 돼서, c를 변경하는 것이 원본 문자열을 변경하는 것과 동일하게 동작해.
+따라서, 문자열을 직접 수정하려면 참조를 사용해야 해. 만약 char a로 선언하면 원본 문자열을 변경할 수 없어서 원하는 결과를 얻을 수 없게 돼.
+*/
