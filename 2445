@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+
+    int N;
+    cin >> N;
+    int j = N;
+    int k = N;
+    
+    for (int i=0 ; i < N; i++){
+        cout << string(i+1,'*') << string(2*j-2,' ') << string(i+1,'*') << endl;
+        j--;
+    }
+
+    for (int o=1 ; o < N; o++){
+        cout << string(k-1,'*') << string(2*o,' ') << string(k-1,'*') << endl;
+        k--;
+    }
+}
